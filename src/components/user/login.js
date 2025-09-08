@@ -77,13 +77,10 @@ const Login = () => {
                     </button>
                 </form>
                 <div className="text-center mt-3">
-                    <a href="/User/register" className="text-decoration-none">
+                    <a href="/User/register" className="text-decoration-underline">
                         Create an account
                     </a>
-                    {" | "}
-                    <a href="/User/forget-password" className="text-decoration-none">
-                        Forgot password?
-                    </a>
+                    
                 </div>
             </div>
         </div>
