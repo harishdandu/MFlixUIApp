@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../../App.css';
 import '../../stylesheets/login.css';
 import { loginAPI } from '../../services/loginService';
 
 const Login = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: "",
         password: "",
@@ -23,6 +25,12 @@ const Login = () => {
         const response = await loginAPI(formData);
         if (response) {
             console.log("Login successful:", response);
+            if(response.statusCode === "S"){
+                localStorage.setItem('activeLink', 'Customers');
+                localStorage.setItem('token', response.token);
+                localStorage.setItem('loggedInUserData', JSON.stringify(response.user));
+                navigate('/Dashboard/Customers');
+            }
         }else{
             console.log("Login failed");
         }
