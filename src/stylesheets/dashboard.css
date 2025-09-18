@@ -1,0 +1,44 @@
+/* Container for the entire dashboard layout */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: #fff;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 80px;
+    z-index: 1000;
+    /* background-color: #2c3e50; */
+    box-shadow: 1px 1px 5px 0 #d3d3d3;
+}
+
+/* Main content area styling */
+.main-content {
+    height: auto;
+    left: 72px !important;
+    position: absolute;
+    width: calc(100% - 72px);
+}
+
+/* Header styling */
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 50px;
+    left: 70px;
+    width: calc(100% - 70px);
+}
+
+/* Routed content area styling */
+.content {
+    /* flex: 1; */
+    margin-top: 50px;
+    padding: 10px 20px;
+    overflow-y: auto;
+}

@@ -1,0 +1,32 @@
+.pdf-container {
+    display: flex;
+    height: 100vh;
+}
+
+.headings {
+    width: 25%;
+    background: #f4f4f4;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.headings ul {
+    list-style: none;
+    padding: 0;
+}
+
+.headings li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+}
+
+.headings li:hover {
+    background-color: #e0e0e0;
+}
+
+.pdf-view {
+    width: 75%;
+    overflow-y: auto;
+    padding: 20px;
+}
