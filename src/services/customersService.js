@@ -40,10 +40,10 @@ export async function transactionsByAccountNoAPI(accountNo) {
     }
 }
 
-export async function getProductDetailsAPI(searchText) {
+export async function getProductDetailsAPI(page, rowsPerPage, searchText) {
 try {
         console.log('Login request data:');
-        const response = await api.get('/dashboard/getProductDetails?searchText='+searchText);
+        const response = await api.get('/dashboard/getProductDetails?searchText='+searchText+'&page='+page+'&rowsPerPage='+rowsPerPage);
         const productDetailsRes = response.data;
         
         if (!response.statusText === "OK") {
